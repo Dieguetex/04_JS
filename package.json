@@ -1,0 +1,20 @@
+{
+  "name": "04_JS",
+  "version": "1.0.0",
+  "description": "Módulo 2 del curso de páginas web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dieguetex/04_JS.git"
+  },
+  "keywords": ["JavaScript", "ECMAScript"],
+  "author": "Diego Pérez",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/Dieguetex/04_JS/issues"
+  },
+  "homepage": "https://github.com/Dieguetex/04_JS#readme"
+}
