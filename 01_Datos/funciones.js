@@ -18,6 +18,7 @@ function mostrar(pDato) {
     console.log(pDato)
 }
 
+//DE CONTROL
 function main() {
     mostrar (suma(2,5))
     mostrar (suma(45,172354))
