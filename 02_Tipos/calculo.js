@@ -66,3 +66,4 @@ console.log(resultado)
 resultado = calcularModulo(num2, num1)
 console.log(resultado)
 // console.log(sumar(num1, num2))
+
