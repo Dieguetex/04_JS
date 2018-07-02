@@ -54,18 +54,31 @@ function esPar2 (num) {
 console.log(Boolean(22))
 
 
-// Valores falsy:
+// Valores FALSY:
 console.log(Boolean(false))
 console.log(Boolean(0))
 console.log(Boolean(''))
 console.log(Boolean(undefined))
 
-// Valores truly:
+// Valores TRULY:
 console.log(Boolean(true))
 console.log(Boolean(/* todos los numeros menos 0 son true */109))
 console.log(Boolean(/* Cualquier cosa entre comillas */'Pepe'))
 
 
+// Ejemplo de comparar cadenas.
+
+function compararCadenas()  {
+	let a = "Alex"
+	let b = "Pepepetamo"
+	if (a > b ) {
+		console.log('a es mayor')
+	} else {
+		console.log('b es mayor')
+	}
+}
+
+compararCadenas()
 
 
 
