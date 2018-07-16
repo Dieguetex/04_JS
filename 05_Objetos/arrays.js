@@ -71,3 +71,17 @@ console.log(' '
 aClon2 = aNombres.slice(0,aNombres.length)
 aClon2.push('Juan','Rosa')
 console.log('Esto es un clon de aNombres con Juan y Rosa: '+aClon)
+
+console.log(' ' 
+)
+console.log(' '
+)
+
+let aNotas = [[10,7,8], [5,4,7], [6,3,2]]
+
+console.log(aNotas[1][1])
+
+aNombres = ['Pepe', 'Luis', 'Arancha', 'Rosa', 'Maria']
+
+aNombres.push(...['Lorenzo', 'Herminia'])
+console.log(aNombres); r
