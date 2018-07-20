@@ -28,3 +28,9 @@ function cosaRara() {
 //cosaRara()
 
 new cosaRara()
+
+
+// THIS -> es quien yo decida
+// call() / apply()
+
+//Pero en ES5 se inventaron bind, que le dice a una función que se va a llevar el this contigo, y siempre que alguien llame a this tu lo ejecutaras. Enlaza el valor de this a lo que nosotros le digamos ene ese momento.
