@@ -1,13 +1,21 @@
 import { Empresa } from './Empresa.js'
+import { Elemento } from './Elemento.js';
 
 export class Factura {
+    public empresa: Empresa;
+    private cliente: Empresa;
+    elementos: Array<Elemento>;
+    importeTotal: number;
+    tipoIVA: number;
+    formaPago: string;
+
     constructor (tipoIVA, formaPago) {
         this.empresa = new Empresa(
             'Boracay Ediciones',
             'c/ Pez',
             '587 349 785',
             'Z-345123876')
-        this.cliente = ''
+        this.cliente = new Empresa()
         this.elementos = []
         this.importeTotal = 0
         this.tipoIVA = tipoIVA
@@ -26,7 +34,7 @@ export class Factura {
     // muestre por pantalla el importe total 
     // de la factura en un formato HTML adecuado.
         this.calculaImporteTotal()
-        this.pintaDatos()
+        //this.pintaDatos()
     }
 
     calculaImporteTotal() {
@@ -40,7 +48,7 @@ export class Factura {
         )
     }
 
-    pintaDatos(oDatos = this) {
+    /* pintaDatos(oDatos = this) {
         for (const key in oDatos) {
             if ((typeof oDatos[key] !== 'function')) {
                 if (typeof oDatos[key] === 'object') { 
@@ -53,7 +61,7 @@ export class Factura {
                 }    
             }    
         }
-    }
+    } */
 }
 
 

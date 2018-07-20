@@ -1,20 +1,20 @@
 import {Elemento} from './Elemento.js'
 import {Empresa} from './Empresa.js'
 import {Factura} from './Factura.js'
-import {FacturaHtml} from './FacturaHtml.js';
-
+import { FacturaHtml } from './FacturaHtml.js';
 
 function crearFactura1() {
     let factura1 = new Factura( 
         1.04, 
-        'Contado') 
-        
+        'contado') 
+
     factura1.empresa = new Empresa(
         'Ediciones Alpiste',
         'c/ Piolin',
         '587 349 785',
         'Z-345123876')
 
+    factura1.cliente = "Pepe"     
     /* factura1.cliente = 
         new Empresa(
             'Libreria Tuatalug',
@@ -23,10 +23,10 @@ function crearFactura1() {
             'K-434344343') */
 
     factura1.setCliente(
-        'Libreria Tuatalug',
-        'c/ Tortuga',
-        '543 987 654',
-        'K-434344343')  
+                'Libreria Tuatalug',
+                'c/ Tortuga',
+                '543 987 654',
+                'K-434344343')
     
     factura1.elementos.push(
         new Elemento (
@@ -44,6 +44,7 @@ function crearFactura1() {
     //factura1.mostrar()
     factura1.calculaImporteTotal()
     new FacturaHtml().pintarDatos(factura1)
+
 }
 
 function crearFactura2() {
@@ -71,15 +72,20 @@ function crearFactura2() {
         new Elemento ('El Hobbit', 50, 24)
     )
 
-    factura1.mostrar()    
+    //factura1.mostrar()    
     //console.log(factura1)
+    factura1.calculaImporteTotal()
+    new FacturaHtml().pintarDatos(factura1)
 }
+
+
 
 
 function main() {
-    crearFactura1()
-    //crearFactura2()
+    //crearFactura1()
+    crearFactura2()
 }
 
-
 document.addEventListener('DOMContentLoaded', main)
+
+

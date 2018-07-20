@@ -1,14 +1,13 @@
 import { Empresa } from "./Empresa.js";
 
 export class FacturaHtml {
-    constructor() {
+    constructor () {
         this.empresa = {
-            nombre: document.querySelector("#empresa-nombre"),
-            direccion: document.querySelector("#empresa-direccion"),
-            telefono: document.querySelector("#empresa-telefono"),
-            nif: document.querySelector("#empresa-nif")
+            nombre :  document.querySelector("#empresa-nombre"),
+            direccion : document.querySelector("#empresa-direccion"),
+            telefono : document.querySelector("#empresa-telefono"),
+            nif: document.querySelector("#empresa-nif"  )
         }
-
         this.cliente = new Empresa(
             document.querySelector("#cliente-nombre"),
             document.querySelector("#cliente-direccion"),
@@ -24,8 +23,7 @@ export class FacturaHtml {
     pintarDatos(facturaDatos) {
         console.dir(facturaDatos)
         this.empresa.nombre.innerHTML = facturaDatos.empresa.nombre
-        this.empresa.nombre.innerHTML = facturaDatos.empresa.nombre
-        this.empresa.direccion.innerHTML = facturaDatos.empresa.direccion
+        this.empresa.direccion.innerHTML = facturaDatos.empresa.direccion 
         this.empresa.telefono.innerHTML = facturaDatos.empresa.telefono
         this.empresa.nif.innerHTML = facturaDatos.empresa.nif
         this.cliente.nombre.innerHTML = facturaDatos.cliente.nombre
@@ -36,31 +34,27 @@ export class FacturaHtml {
         this.tipoIVA.innerHTML = facturaDatos.tipoIVA
         this.formaPago.innerHTML = facturaDatos.formaPago
         this.elementosTabla.innerHTML = 
-            this.crearTabla(facturaDatos.elementos)
+                this.crearTabla(facturaDatos.elementos)
     }
 
     crearTabla(elementosDatos) {
         console.log(elementosDatos)
         let tabla =
-            `               
-            <tr class="tabla-title">
+            `<tr class="tabla-title">
                 <th>Descripcion</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
-            </tr>
-            `
+            </tr>`
+
         elementosDatos.forEach(item => {
             tabla +=
                 `<tr>
-                    <td>${item.descripcion}</td>
-                    <td>${item.precio}</td>
-                    <td>${item.cantidad}</td>
-                </tr>
-                `
+                <td>${item.descripcion}</td>
+                <td>${item.precio}</td>
+                <td>${item.cantidad}</td>
+            </tr>`
         });
-
-       return tabla
-
+        return tabla
     }
 
 }
