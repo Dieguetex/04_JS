@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded',
 //        function () {new Apps()})
 
 
-// Seia lo mismo que 
-//function main() {
+// Seria lo mismo que 
+//  function main() {
 //    new Apps()
 //}
-// document.addEventListener('DOMContentLoaded', main)
+// document.addEventList ener('DOMContentLoaded', main)
