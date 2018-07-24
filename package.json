@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/Dieguetex/04_JS.git"
   },
-  "keywords": ["JavaScript", "ECMAScript"],
+  "keywords": [
+    "JavaScript",
+    "ECMAScript"
+  ],
   "author": "Diego Pérez",
   "license": "MIT License",
   "bugs": {
