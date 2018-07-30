@@ -1,16 +1,24 @@
 class App {
     constructor () {
-        this.titulo = document.querySelector('h1')
-        // this.titulo.style='color: brown; background-color: bisque'
-        this.btnMas = document.querySelector('.mas')
-        this.textoMas = document.querySelector('.hide')
-
-        this.btnMas.addEventListener('click', this.mostrar.bind(this))
+        this.aBtnMas = document.querySelectorAll('.mas')
+        this.aBtnMas.forEach(
+            (btn) => {btn.addEventListener('click', this.mostrar.bind(this))}
+        )
     }
 
-    mostrar(){
-    this.textoMas.classList.toggle('hide')
+    mostrar(oE) {  
+        let nodoBtn = oE.target
+        let nodoTxt = nodoBtn.previousElementSibling
+        nodoTxt.classList.toggle('hide')     
+        if(nodoTxt.classList.contains('hide')) {
+           // boton = Ver mas 
+           nodoBtn.textContent = "Ver más"
+        } else {
+            // boton = Ocultar
+            nodoBtn.textContent = "Ver menos"
+        }      
     }
+
 }
 
 document.addEventListener('DOMContentLoaded',
